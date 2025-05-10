@@ -18,6 +18,8 @@ public class ContaTerminal {
         double saldo = argumentos.nextDouble() ;
         
         System.out.println("Olá ".concat(nomeCliente) + ", obrigado por criar uma conta em nosso banco, sua agência é ".concat(agencia).concat(", conta ") + numero + " e seu saldo R$" + String.format("%.2f", saldo) +" já está disponível para saque!");
-        argumentos.close(); // Fecha o scanner corretamente
+
+        // Fecha o scanner corretamente
+        argumentos.close(); 
     }
 }
