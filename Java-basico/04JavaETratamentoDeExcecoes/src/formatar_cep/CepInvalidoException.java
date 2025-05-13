@@ -1,4 +1,4 @@
-package tratamento_de_excecoes.formatar_cep;
+package formatar_cep;
 public class CepInvalidoException extends Exception{
     
 }

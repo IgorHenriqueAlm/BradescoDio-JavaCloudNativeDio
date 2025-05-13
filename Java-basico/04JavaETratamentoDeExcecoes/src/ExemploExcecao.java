@@ -1,5 +1,3 @@
-package tratamento_de_excecoes;
-
 import java.text.NumberFormat;
 import java.text.ParseException;
 
