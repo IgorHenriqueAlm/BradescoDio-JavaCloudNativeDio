@@ -1,3 +1,5 @@
+package projeto_up1;
+
 public class ComputadorPedrinho {
     public static void main(String[] args) {
         System.out.println("<-------MSN-------->");

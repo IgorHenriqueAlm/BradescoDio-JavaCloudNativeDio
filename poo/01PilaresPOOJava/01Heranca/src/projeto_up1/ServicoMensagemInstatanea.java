@@ -1,4 +1,5 @@
-public class MSNmensseger {
+package projeto_up1;
+public class ServicoMensagemInstatanea {
     public void enviarMenssagem(){
         validarConexaoInternet();
         System.out.println("Enviando menssagem");
