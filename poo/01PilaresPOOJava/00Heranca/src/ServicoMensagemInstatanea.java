@@ -1,5 +1,5 @@
 public class ServicoMensagemInstatanea {
-      public void enviarMenssagem(){
+    public void enviarMenssagem(){
         validarConexaoInternet();
         System.out.println("Enviando menssagem");
         salvarHistoricoMenssagem();
