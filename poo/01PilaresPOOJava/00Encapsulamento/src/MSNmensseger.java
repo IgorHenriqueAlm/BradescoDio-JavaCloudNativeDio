@@ -11,6 +11,6 @@ public class MSNmensseger {
         System.out.println("Validando se há conexão à internet");
     }
     private void salvarHistoricoMenssagem(){
-        System.out.println("Salvando histórico da mensagempublic");
+        System.out.println("Salvando histórico da mensagem");
     }
 }
