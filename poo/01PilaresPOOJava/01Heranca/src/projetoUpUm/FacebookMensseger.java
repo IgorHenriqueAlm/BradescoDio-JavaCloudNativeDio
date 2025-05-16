@@ -1,4 +1,4 @@
-package projeto_up1;
+package projetoUpUm;
 public class FacebookMensseger extends ServicoMensagemInstatanea{
 
 }

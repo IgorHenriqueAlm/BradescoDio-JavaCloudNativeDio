@@ -1,4 +1,4 @@
-package projeto_up1;
+package projetoUpUm;
 
 public class ComputadorPedrinho {
     public static void main(String[] args) {
