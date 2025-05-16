@@ -1,4 +1,4 @@
 public abstract class ServicoMensagemInstatanea {
-    public abstract void enviarMenssagem();
-    public abstract void recberMenssagem();
+    abstract void enviarMenssagem();
+    abstract void recberMenssagem();
 }

@@ -1,8 +1,8 @@
 public class FacebookMensseger extends ServicoMensagemInstatanea{
-    public void enviarMenssagem(){
+    void enviarMenssagem(){
         System.out.println("Enviando menssagem do FacebookMensseger");
     }
-    public void recberMenssagem(){
+    void recberMenssagem(){
         System.out.println("Recbendo menssagem do FacebookMensseger");
     }
 }

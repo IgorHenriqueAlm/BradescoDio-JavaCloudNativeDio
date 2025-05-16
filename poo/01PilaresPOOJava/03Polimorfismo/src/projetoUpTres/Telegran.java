@@ -1,8 +1,8 @@
 public class Telegran extends ServicoMensagemInstatanea{
-    public void enviarMenssagem(){
+    void enviarMenssagem(){
         System.out.println("Enviando menssagem do Telegran");
     }
-    public void recberMenssagem(){
+    void recberMenssagem(){
         System.out.println("Recbendo menssagem do Telegran");
     }
 }

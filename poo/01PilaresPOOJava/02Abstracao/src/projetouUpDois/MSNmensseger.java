@@ -1,8 +1,8 @@
 public class MSNmensseger extends ServicoMensagemInstatanea{
-    public void enviarMenssagem(){
+    void enviarMenssagem(){
         System.out.println("Enviando menssagem do MSNmensseger");
     }
-    public void recberMenssagem(){
+    void recberMenssagem(){
         System.out.println("Recbendo menssagem do MSNmensseger");
     }
 }
