@@ -1,4 +1,3 @@
-package teste;
 public class Telegran extends ServicoMensagemInstatanea{
     public void enviarMenssagem(){
         System.out.println("Enviando menssagem do Telegran");
