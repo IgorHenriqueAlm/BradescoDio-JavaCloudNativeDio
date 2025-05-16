@@ -1,4 +1,3 @@
-package teste;
 public class ComputadorPedrinho {
     public static void main(String[] args) {
         System.out.println("<-------MSN-------->");
