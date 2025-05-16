@@ -1,8 +1,8 @@
 public class TelegranUp3 extends ServicoMensagemInstataneaUp3{
-    void enviarMenssagem(){
+    protected void enviarMenssagem(){
         System.out.println("Enviando menssagem do Telegran");
     }
-    void recberMenssagem(){
+    protected void recberMenssagem(){
         System.out.println("Recbendo menssagem do Telegran");
     }
 }
