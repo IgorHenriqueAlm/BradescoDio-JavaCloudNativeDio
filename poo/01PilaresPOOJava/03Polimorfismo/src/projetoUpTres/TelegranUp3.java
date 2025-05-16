@@ -1,4 +1,4 @@
-public class Telegran extends ServicoMensagemInstatanea{
+public class TelegranUp3 extends ServicoMensagemInstataneaUp3{
     void enviarMenssagem(){
         System.out.println("Enviando menssagem do Telegran");
     }

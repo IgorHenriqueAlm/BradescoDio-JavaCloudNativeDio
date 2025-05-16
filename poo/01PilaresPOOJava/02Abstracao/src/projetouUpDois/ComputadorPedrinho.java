@@ -1,17 +1,17 @@
 public class ComputadorPedrinho {
     public static void main(String[] args) {
         System.out.println("<-------MSN-------->");
-        MSNmensseger msn = new MSNmensseger();
+        MSNmenssegerUp2 msn = new MSNmenssegerUp2();
         msn.enviarMenssagem();
         msn.recberMenssagem();
         
         System.out.println("<-------FACEBOOK-------->");
-        FacebookMensseger fcb = new FacebookMensseger();
+        FacebookMenssegerUp2 fcb = new FacebookMenssegerUp2();
         fcb.enviarMenssagem();
         fcb.recberMenssagem();
         
         System.out.println("<-------TELEGRAM-------->");
-        Telegran tlg = new Telegran();
+        TelegranUp2 tlg = new TelegranUp2();
         tlg.enviarMenssagem();
         tlg.recberMenssagem();
         System.out.println("<-------projeto_up2-------->");
