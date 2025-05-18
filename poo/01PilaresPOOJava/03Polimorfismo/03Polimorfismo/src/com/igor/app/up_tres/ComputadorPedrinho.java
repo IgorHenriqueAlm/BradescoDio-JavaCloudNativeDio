@@ -1,5 +1,10 @@
 package com.igor.app.up_tres;
 
+import com.igor.app.up_tres.apps.FacebookMensseger;
+import com.igor.app.up_tres.apps.MSNmensseger;
+import com.igor.app.up_tres.apps.ServicoMensagemInstatanea;
+import com.igor.app.up_tres.apps.Telegran;
+
 public class ComputadorPedrinho {
     public static void main(String[] args) {
         // System.out.println("<-------MSN-------->");
