@@ -1,4 +1,5 @@
-public abstract class Clock {
+package relogio;
+public sealed abstract class Clock permits BLRClock, USClock {
 
     protected int hour;
 
@@ -11,7 +12,7 @@ public abstract class Clock {
     }
 
     public void setHour(int hour) {
-        if (hour <= 24) {
+        if (hour >= 24) {
             this.hour = 24;
             return;
         }
@@ -23,7 +24,7 @@ public abstract class Clock {
     }
 
     public void setMinute(int minute) {
-        if (minute <= 60) {
+        if (minute >= 60) {
             this.minute = 60;
             return;
         }
@@ -35,11 +36,19 @@ public abstract class Clock {
     }
 
     public void setSecond(int second) {
-        if (second <= 60) {
+        if (second >= 60) {
             this.second = 60;
             return;
         }
         this.second = second;
+    }
+
+    private String format(int value) {
+        return value < 9 ? "0" + value : String.valueOf(value);
+    }
+
+    public String getTime(){
+        return format(hour) + ":" + format(minute) + ":" + format(second);
     }
 
     abstract Clock convert(Clock clock);
