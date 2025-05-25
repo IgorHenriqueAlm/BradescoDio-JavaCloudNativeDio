@@ -1,13 +1,13 @@
 public class ContaCorrente extends Conta {
 
-	public ContaCorrente(Cliente cliente) {
-		super(cliente);
-	}
+    private static final double TAXA_OPERACAO = 0.50;
 
-	@Override
-	public void imprimirExtrato() {
-		System.out.println("=== Extrato Conta Corrente ===");
-		super.imprimirInfosComuns();
-	}
-	
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
+    }
+
+    @Override
+    public void sacar(double valor) {
+        super.sacar(valor + TAXA_OPERACAO);
+    }
 }
