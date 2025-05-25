@@ -1,51 +1,57 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Conta implements IConta {
-	
-	private static final int AGENCIA_PADRAO = 1;
-	private static int SEQUENCIAL = 1;
 
-	protected int agencia;
-	protected int numero;
-	protected double saldo;
-	protected Cliente cliente;
+    private static final int AGENCIA_PADRAO = 1;
+    private static int SEQUENCIAL = 1;
 
-	public Conta(Cliente cliente) {
-		this.agencia = Conta.AGENCIA_PADRAO;
-		this.numero = SEQUENCIAL++;
-		this.cliente = cliente;
-	}
+    protected int agencia;
+    protected int numero;
+    protected double saldo;
+    protected Cliente cliente;
+    protected List<String> historico;
 
-	@Override
-	public void sacar(double valor) {
-		saldo -= valor;
-	}
+    public Conta(Cliente cliente) {
+        this.agencia = AGENCIA_PADRAO;
+        this.numero = SEQUENCIAL++;
+        this.cliente = cliente;
+        this.historico = new ArrayList<>();
+    }
 
-	@Override
-	public void depositar(double valor) {
-		saldo += valor;
-	}
+    @Override
+    public void sacar(double valor) {
+        saldo -= valor;
+        historico.add("Saque de R$ " + valor);
+    }
 
-	@Override
-	public void transferir(double valor, IConta contaDestino) {
-		this.sacar(valor);
-		contaDestino.depositar(valor);
-	}
+    @Override
+    public void depositar(double valor) {
+        saldo += valor;
+        historico.add("Depósito de R$ " + valor);
+    }
 
-	public int getAgencia() {
-		return agencia;
-	}
+    @Override
+    public void transferir(double valor, Conta contaDestino) {
+        this.sacar(valor);
+        contaDestino.depositar(valor);
+        historico.add("Transferência de R$ " + valor + " para conta " + contaDestino.numero);
+    }
 
-	public int getNumero() {
-		return numero;
-	}
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("Titular: " + this.cliente.getNome());
+        System.out.println("Agência: " + this.agencia);
+        System.out.println("Número: " + this.numero);
+        System.out.println("Saldo: R$ " + this.saldo);
+    }
 
-	public double getSaldo() {
-		return saldo;
-	}
-
-	protected void imprimirInfosComuns() {
-		System.out.println(String.format("Titular: %s", this.cliente.getNome()));
-		System.out.println(String.format("Agencia: %d", this.agencia));
-		System.out.println(String.format("Numero: %d", this.numero));
-		System.out.println(String.format("Saldo: %.2f", this.saldo));
-	}
+    @Override
+    public void imprimirExtratoDetalhado() {
+        imprimirExtrato();
+        System.out.println("Histórico de transações:");
+        for (String evento : historico) {
+            System.out.println("- " + evento);
+        }
+    }
 }
