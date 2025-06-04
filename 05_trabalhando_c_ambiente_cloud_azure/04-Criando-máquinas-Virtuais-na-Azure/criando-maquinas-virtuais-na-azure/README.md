@@ -2,7 +2,7 @@
 
 ## 🧠 Resumo do Desafio
 
-Este repositório contém a documentação do laboratório de criação e configuração de uma máquina virtual (VM) na plataforma Microsoft Azure, como parte do curso de fundamentos da nuvem.
+Este repositório contém a documentação do laboratório de criação e configuração de uma máquina virtual (VM) na plataforma Microsoft Azure, como parte do bootcamp Bradesco - Java Cloud Native.
 
 ---
 
