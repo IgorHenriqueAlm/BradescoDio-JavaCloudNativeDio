@@ -7,8 +7,6 @@ public class Main {
     private final static PetMachine petMachine = new PetMachine();
         
     public static void main(String[] args) {
-        //TODO:Resolver problema de espaço 
-        //scanner.useDelimiter("\\n");
         var option = -1;
 
         do {
@@ -24,6 +22,7 @@ public class Main {
             System.out.println("9 - limpar maquina");
             System.out.println("0 - sair");
             option = scanner.nextInt();
+            scanner.nextLine();
 
             switch (option) {
                 case 1 -> petMachine.takeAShower();
@@ -72,7 +71,7 @@ public class Main {
         var name = "";
         while (name == null || name.isEmpty()) {
             System.out.println("Informe o nome do pet: ");
-            name = scanner.next();
+            name = scanner.nextLine().trim();
         }
         var pet = new Pet(name);
         petMachine.setPet(pet);
