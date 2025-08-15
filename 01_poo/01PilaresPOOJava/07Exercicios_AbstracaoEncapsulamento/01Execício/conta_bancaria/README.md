@@ -88,7 +88,7 @@ Ao executar o programa, o usuário pode escolher:
    Obs: copie o caminho completo do **seu** diretório onde está localizado o repositório clonado e siga as instruções abaixo.
    ```bash
    cd caminhoSeuDiretorio... BradescoDio-JavaCloudNative\BradescoDio-JavaCloudNativeDio\01_poo\01PilaresPOOJava\07Exercicios_AbstracaoEncapsulamento\01Execício\conta_bancaria
-   javac *.java
+   javac src\*.java
    ```
 
 3. Execute a aplicação:
