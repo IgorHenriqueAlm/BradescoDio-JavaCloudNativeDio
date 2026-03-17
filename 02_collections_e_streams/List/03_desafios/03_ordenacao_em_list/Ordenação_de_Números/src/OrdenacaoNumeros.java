@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class OrdenacaoNumeros {
-    List<Integer> numerosList;
+    private List<Integer> numerosList;
 
     public OrdenacaoNumeros() {
         this.numerosList = new ArrayList<>();
