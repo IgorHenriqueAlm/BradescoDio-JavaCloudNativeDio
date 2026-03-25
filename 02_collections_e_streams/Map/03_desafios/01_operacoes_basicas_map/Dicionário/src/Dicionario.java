@@ -33,7 +33,7 @@ public class Dicionario {
 
     private void validar() {
         if (dicionario.isEmpty()) {
-            throw new NullPointerException("O dicionário está vazio.");
+            throw new RuntimeException("O dicionário está vazio.");
         }
     }
 }

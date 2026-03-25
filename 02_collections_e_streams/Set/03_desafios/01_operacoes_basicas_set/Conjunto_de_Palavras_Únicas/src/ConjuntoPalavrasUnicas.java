@@ -32,7 +32,7 @@ public class ConjuntoPalavrasUnicas {
 
     private void validar() {
         if (palavrasUnicas.isEmpty()) {
-            throw new NullPointerException("O conjunto de palavras únicas está vazio.");
+            throw new RuntimeException("O conjunto de palavras únicas está vazio.");
         }
     }
 }

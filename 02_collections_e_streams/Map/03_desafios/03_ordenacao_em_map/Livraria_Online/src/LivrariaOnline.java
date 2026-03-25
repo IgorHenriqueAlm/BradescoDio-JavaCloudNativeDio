@@ -27,7 +27,7 @@ public class LivrariaOnline {
         }
         if (livroParaRemover != null) livros.remove(livroParaRemover);
 
-        else throw new IllegalArgumentException("Livro não encontrado");
+        else throw new RuntimeException("Livro não encontrado");
     }
 
     public void exibirLivrosOrdenadosPorPreco() {
@@ -58,7 +58,7 @@ public class LivrariaOnline {
         }
 
         if (livrosPorAutor.size() == 0) 
-            throw new IllegalArgumentException("Nenhum livro encontrado para o autor: " + autor);
+            throw new RuntimeException("Nenhum livro encontrado para o autor: " + autor);
         
         return livrosPorAutor;
     }
@@ -101,7 +101,7 @@ public class LivrariaOnline {
 
     private void validar() {
         if (livros.isEmpty()) {
-            throw new NullPointerException("O Map está vazio.");
+            throw new RuntimeException("O Map está vazio.");
         }
     }
 

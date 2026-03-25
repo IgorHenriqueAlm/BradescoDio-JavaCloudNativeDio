@@ -25,7 +25,7 @@ public class GerenciadorAlunos {
             }
         }
         if (alunoParaRemover == null)
-            throw new NullPointerException("A lista não contém esse aluno.");
+            throw new RuntimeException("A lista não contém esse aluno.");
     }
 
     public void exibirAlunosPorNome() {
@@ -48,7 +48,7 @@ public class GerenciadorAlunos {
 
     private void validar() {
         if (alunos.isEmpty()) 
-            throw new NullPointerException("A lista de alunos está vazia.");
+            throw new RuntimeException("A lista de alunos está vazia.");
         
     }
 }

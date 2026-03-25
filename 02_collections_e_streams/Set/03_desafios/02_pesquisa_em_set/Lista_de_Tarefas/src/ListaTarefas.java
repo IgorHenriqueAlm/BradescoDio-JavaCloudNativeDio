@@ -73,14 +73,14 @@ public class ListaTarefas {
             }
         }
         if (tarefa == null)
-            throw new NullPointerException("A lista não contém essa tarefa");
+            throw new RuntimeException("A lista não contém essa tarefa");
         
         return tarefa;
     }
 
     private void validar() {
         if (conjuntoTarefas.isEmpty()) 
-            throw new NullPointerException("A lista de tarefas está vazia.");
+            throw new RuntimeException("A lista de tarefas está vazia.");
         
     }
 }

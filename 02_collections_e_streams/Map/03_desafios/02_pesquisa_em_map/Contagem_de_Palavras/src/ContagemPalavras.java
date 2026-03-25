@@ -16,7 +16,7 @@ public class ContagemPalavras {
         validar();
         if (contagemMap.containsKey(palavra)) contagemMap.remove(palavra);
 
-        else throw new IllegalArgumentException("A palavra '" + palavra + "' não existe no Map.");
+        else throw new RuntimeException("A palavra '" + palavra + "' não existe no Map.");
     }
 
     public int exibirContagemPalavras() {
@@ -45,7 +45,7 @@ public class ContagemPalavras {
 
     private void validar() {
         if (contagemMap.isEmpty()) {
-            throw new NullPointerException("O Map está vazio.");
+            throw new RuntimeException("O Map está vazio.");
         }
     }
 }
